@@ -17,5 +17,14 @@ Works on Ubuntu (tested on 18.04 LTS)
 
 ```  sudo apt-get install -y xinput```
 
-3. To enable the 
+3. Convert the script into an executable via ```chmod```
+
+```chmod u+x natscroller.sh```
+
+4. Finally, run the script:
+
+```./natscroller.sh ```
+
+
+Do not close the terminal session for the duration of the the day, and repeatedly disconnect and connect your mouse in peace.
 
