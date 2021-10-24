@@ -3,11 +3,13 @@ while true
 do	
 		
     	OUTPUT=$(lsusb)
+	BT_output=$(hcitool dev)
 	key_arr=("Mouse" "mouse" "MOUSE") 
+
 	for str in ${key_arr[@]}; do
 		#echo "Checking for"
 		#echo "$str"
-		if [[ $OUTPUT =~ "$str" ]]; then
+		if [[ $OUTPUT =~ "$str" ]] || [[ $BT_output =~ "$str" ]]; then
 			input_list=$(xinput --list)
 			#echo "${input_list}"
 			ids=$(xinput --list | awk -v search="$str" \
